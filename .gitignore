@@ -1,6 +1,7 @@
 .idea
 .ipynb_checkpoints
-create_patient_list.py
+.__pycache__
+src/create_patient_list.py
 csv/extracted_features/*
 csv/original_data/*
 csv/static/*
