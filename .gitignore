@@ -1,0 +1,11 @@
+.idea
+.ipynb_checkpoints
+create_patient_list.py
+csv/extracted_features/*
+csv/original_data/*
+csv/static/*
+csv/logs.log
+extraction_models/*
+logs.log
+venv
+!.gitkeep
