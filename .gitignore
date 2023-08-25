@@ -1,12 +1,16 @@
 .idea
 .ipynb_checkpoints
 .__pycache__
+/MEDprofile_data
+/TODO
 src/create_patient_list.py
 csv/extracted_features/*
+csv/master_table.csv
 csv/original_data/*
 csv/static/*
 csv/logs.log
 extraction_models/*
 logs.log
+MEDclasses/
 venv
 !.gitkeep
