@@ -18,6 +18,10 @@ def set_time_point(df, class_name, time_point):
 
 
 def generate_static_csv_from_df(df, path):
+    if 'Days_from_relative_date' in df.columns:
+        df.drop('Days_from_relative_date', axis=1, inplace=True)
+    if 'Relative_date' in df.columns:
+        df.drop('Relative_date', axis=1, inplace=True)
     for time_point in set(df.iloc[1:]['Time_point'].dropna()):
         df[df['Time_point'] == time_point].dropna(axis=1, how='all').drop('Time_point', axis=1).to_csv(
             path + str(int(time_point)) + '.csv', index=False)
