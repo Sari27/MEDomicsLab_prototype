@@ -1,6 +1,5 @@
 .idea
 .ipynb_checkpoints
-.__pycache__
 /TODO
 data/csv/extracted_features/*
 data/csv/master_table.csv
