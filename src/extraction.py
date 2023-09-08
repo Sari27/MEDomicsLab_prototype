@@ -16,10 +16,30 @@ BIOBERT_MODEL = AutoModel.from_pretrained(BIOBERT_PATH)
 
 
 def filter_dataframe_by_patient(df, id_column, patient_list):
+    """
+    Function used to filter the dataframe df by the patient list patient_list.
+
+    :param df: Pandas dataframe.
+    :param id_column: Column in df containing the patient identifiers.
+    :param patient_list: The list of patient identifiers.
+
+    :return: Filtered dataframe.
+
+    """
     return df.loc[df[id_column].isin(patient_list)]
 
 
 def convert_df_time_column_to_format(df, time_column, format='ISO8601'):
+    """
+    Convert the column time_column in the dataframe df to the format format.
+
+    :param df: Pandas dataframe.
+    :param time_column: Column to convert.
+    :param format: Format in which we want to convert the time column.
+
+    :return:
+
+    """
     df[time_column] = dd.to_datetime(df[time_column], format=format)
 
 
